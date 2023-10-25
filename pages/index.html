@@ -2,8 +2,33 @@
 <html>
 <head>
 <title>Sandbox</title>
+<!--CSS-->
 <link rel="stylesheet" href="style.css">
+<!--/CSS-->
+<!--Data Layer-->
+<script>
+var digitalData = {
+    "page": {
+        "pageInfo" : {
+            "pageName": "Home"
+        }
+    }
+};
+</script>
+<!--/Data Layer-->
+<!--jQuery or other helper libraries-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--/jQuery-->
+<!--prehiding snippet for Adobe Target with asynchronous tags deployment-->
+<script>
+    (function(g,b,d,f){(function(a,c,d){if(a){var e=b.createElement("style");e.id=c;e.innerHTML=d;a.appendChild(e)}})(b.getElementsByTagName("head")[0],"at-body-style",d);setTimeout(function(){var a=b.getElementsByTagName("head")[0];if(a){var c=b.getElementById("at-body-style");c&&a.removeChild(c)}},f)})(window,document,"body {opacity: 0 !important}",3E3);
+</script>
+<!--/prehiding snippet for Adobe Target with asynchronous tags deployment-->
+<!--Adobe Launch dev environment-->
+<script src="https://assets.adobedtm.com/9eec81f3a11d/b236ed728424/launch-ce827d11eb38-development.min.js" async></script>
 <script src="https://assets.adobedtm.com/9eec81f3a11d/78636f91c6e9/launch-7366e3319de1.min.js" async></script>
+
+<!--/Adobe Launch-->
 </head>
 <body>
 <h1>Merkle Sandbox</h1>
@@ -11,6 +36,7 @@
 <p>Below is a list of the other pages on this site:</p>
 <ul>
     <li><a href="hello.html">Hello</a></li>
+    <li><a href="target.html">Target</a></li>
 </ul>
 </body>
 </html>
