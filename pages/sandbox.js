@@ -5,6 +5,5 @@ window.sandboxControl = {};
 
     window.adobeDataLayer = window.adobeDataLayer || [];
 
-
 })(window.sandboxControl);
-performance.mark("sandboxControl:start");
+performance.mark("sandboxControl:end");
