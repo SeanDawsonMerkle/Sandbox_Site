@@ -2,6 +2,7 @@ window.adobeDataLayer = window.adobeDataLayer || [];
 window.launchControl = window.launchControl || {};
 (function (lc) {
     lc.codeVersion = "2024jan19v1";
+    window.lc = lc; //for ease of testing
     var tBuildTime = new Date(_satellite.buildInfo.buildDate);
     lc.buildInfo = {
         event: "launch_build_info",
@@ -15,4 +16,11 @@ window.launchControl = window.launchControl || {};
     };
     adobeDataLayer.push(lc.buildInfo);
     _satellite.logger.debug(lc.buildInfo);
+
+    lc.calcPerformance = function() {
+        lc.scriptSrc = document.querySelector("script[src*='assets.adobedtm']").src;
+        lc.launchPerfEntry = performance.getEntriesByName(lc.scriptSrc)[0];
+
+        _satellite.logger.debug("Launch Performance: start:", lc.launchPerfEntry.startTime, " - duration", lc.launchPerfEntry.duration);
+    };
 })(window.launchControl);
