@@ -1,7 +1,7 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
 window.launchControl = window.launchControl || {};
 (function (lc) {
-    lc.codeVersion = "2024jan19v1";
+    lc.codeVersion = "2024sept11v2";
     window.lc = lc; //for ease of testing
     var tBuildTime = new Date(_satellite.buildInfo.buildDate);
     lc.buildInfo = {

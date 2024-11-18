@@ -14,20 +14,6 @@ window._svq.push(['_trackIdentity', (result) => {
     //NOTE: tag fires '_svtrackidentity_response' after this callback
 }]);
 
-console.log("_svq init:", Date.now() - startTime);
-
-window.loadPreconnect = function () {
-    var newLinkElem = document.createElement('link');
-    newLinkElem.rel = "preconnect";
-    newLinkElem.href = "https://track.sv.rkdms.com";
-    newLinkElem.crossOrigin = "";
-    var currScriptTag = document.getElementsByTagName("script")[0];
-    currScriptTag.parentNode.insertBefore(newLinkElem, currScriptTag);
-
-    console.log("preconnect link added:", Date.now() - startTime);
-}
-window.loadPreconnect();
-
 window.merkuryTagLoaded = function () {
     console.log("tag loaded:", Date.now() - startTime);
 };
