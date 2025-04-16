@@ -1,0 +1,23 @@
+Merkle Platform Group
+ABC Test Profile Lookup
+e314484b-31c1-4860-b41d-67c2e7f5a8d0
+
+https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-edge-profile-lookup
+
+'{
+    "event":
+    {
+        "xdm": {
+            "identityMap": {
+                "Email": [
+                    {
+                        "id":"test123@adobetest.com",
+                        "primary":true
+                    }
+                ]
+            }
+        }
+    }
+
+}'
+

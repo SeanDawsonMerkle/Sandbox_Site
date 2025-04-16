@@ -35,7 +35,7 @@
                     var c = b.getElementById("at-body-style");
                     c && a.removeChild(c)
                 }
-            }, f)})(window, document, "body {opacity: 0.5 !important}", 5000);
+            }, f)})(window, document, "body {opacity: 0.5 !important}", 500);
     </script>
     <!--/prehiding snippet for Adobe Target with asynchronous tags deployment-->
     <!--Adobe Launch dev environment-->
@@ -51,8 +51,11 @@
     <ul>
         <li><a href="hello.html">Hello with Target V2</a></li>
         <li><a href="target.html">Target</a></li>
+        <li><a id="mimicMerkuryLoad">
+            <button>Mimic Merkury Load with ECPDID</button>
+        </a></li>
     </ul>
-    <img src="images/YinYangOrangeDragon.jpg">
+    <!--<img src="images/YinYangOrangeDragon.jpg">-->
     <script>
         window.adobeDataLayer.push({
             event: "body_end"

@@ -12,23 +12,9 @@ window._svq.push(['_trackIdentity', (result) => {
     // DO STUFF WITH 'identity' data
     window._svDataLayer = identity;
     //NOTE: tag fires '_svtrackidentity_response' after this callback
-    
-    //call Target V2 with Merkury data
-    if (identity) {
-        adobe.target.getOffer({
-            mbox: "merkuryIdGraph",
-            params: {
-                "merkury_hmid": identity.hmid,
-                "merkury_confScore": identity.confidence_score,
-            },
-            success: function (response) {
-                console.log('Success', JSON.stringify(response, null, 4));
-            },
-            error: function (status, error) { console.log('Error', status, error); }
-        });
-    }
-
 }]);
+
+console.log("_svq init:", Date.now() - startTime);
 
 window.merkuryTagLoaded = function () {
     console.log("tag loaded:", Date.now() - startTime);
