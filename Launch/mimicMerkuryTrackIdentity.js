@@ -3,7 +3,7 @@ _satellite.logger.debug("MimicMerkuryTrackIdentity START");
 window._svDataLayer = {
     trackIdentityDataLayer : {
         data : {
-            abcid : "profilelookup20250411b",
+            abcid : document.getElementById("abcidInput").value
         }
     }
 }

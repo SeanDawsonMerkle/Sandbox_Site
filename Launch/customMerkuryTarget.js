@@ -34,9 +34,13 @@ alloy("sendEvent", {
     window.merkuryIdentityResult = result;
     _satellite.logger.debug("merkuryIdentity RESULT", result);
 
+    window.merkuryIdentityContent = [];
     if (result && result.propositions && result.propositions.length > 0) {
         for (var i = 0; i < result.propositions.length; i++) {
-            tContent = result.propositions[i]?.items[0]?.data?.content;
+            var tContent = result.propositions[i]?.items[0]?.data?.content;
+            merkuryIdentityContent.push(tContent);
+            _satellite.logger.debug("merkuryIdentity Content", tContent);
+            document.getElementById('targetContent').innerText = JSON.stringify(tContent, null, 2);
         }
     }
 }).catch(function (err) {
