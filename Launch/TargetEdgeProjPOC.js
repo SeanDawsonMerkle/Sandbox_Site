@@ -1,12 +1,12 @@
 _satellite.logger.debug("Running custom Merkury Target call");
 
-var hmid = _svDataLayer.trackIdentityDataLayer.data.hmid;
+var abcid = _svDataLayer.trackIdentityDataLayer.data.abcid;
 
-if (!hmid) {
-    _satellite.logger.debug("Merkury Target call skipped, no hmid found in data layer.");
+if (!abcid) {
+    _satellite.logger.debug("Merkury Target call skipped, no abcid found in data layer.");
     return false;
 }
-_satellite.logger.debug("Web SDK call with hmid: " + hmid);
+_satellite.logger.debug("Web SDK call with abcid: " + abcid);
 
 alloy("sendEvent", {
     "renderDecisions": true,
@@ -14,8 +14,20 @@ alloy("sendEvent", {
     "data": {
         __adobe: {
             target: {
-                merkury_hmid: hmid,
+                merkury_abcid: abcid,
             }
+        }
+    },
+    "xdm": {
+        "eventType": "merkuryIdentity",
+        "identityMap": {
+            "ABCID": [
+                {
+                    "id": abcid,
+                    "authenticatedState": "authenticated",
+                    "primary": true
+                }
+            ]
         }
     }
 }).then(function (result) {

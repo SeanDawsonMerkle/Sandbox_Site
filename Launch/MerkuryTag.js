@@ -11,6 +11,7 @@ window._svq.push(['_trackIdentity', (result) => {
     var identity = result?.d?.trackIdentity?.data;
     // DO STUFF WITH 'identity' data
     window._svDataLayer = identity;
+    document.getElementById('merkury_svDataLayer').innerText = JSON.stringify(tContent, null, 2);
     //NOTE: tag fires '_svtrackidentity_response' after this callback
 }]);
 
@@ -37,3 +38,5 @@ setTimeout(() => {
     console.log("end 1 second delay:", Date.now() - startTime);
     window.loadMerkuryTag();
 }, (1000));
+
+return true;

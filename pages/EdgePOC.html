@@ -47,16 +47,21 @@
 
 <body>
     <h1>Sean Dawson Merkle Sandbox</h1>
-    <p>Load Merkury Tag and call _trackIdentity</p>
+    <p>Testing Edge Profile Projection.<a
+        href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-edge-profile-lookup">
+        Adobe AEP Doc</a></p>
 
-    <button id="StartMerkuryLoad">Start Merkury Process</button>
-
-    <h2>Merkury returned _svDataLayer</h2>
-    <p id="merkury_svDataLayer">no initial content</p>
+    <button id="mimicMerkuryLoad">Mimic Merkury Load with ABCID</button>
+    <input type="text" id="abcidInput" value="profilelookup20250411b">
+    <ul>
+        <li>profilelookup20250411b</li>
+        <li>profilelookup20250416</li>
+    </ul>
 
     <h2>Target returned content</h2>
     <p id="targetContent">no initial content</p>
-    
+    <button onclick="document.getElementById('targetContent').innerText = '';">Clear</button>
+    <!--<img src="images/YinYangOrangeDragon.jpg">-->
     <script>
         window.adobeDataLayer.push({
             event: "body_end"
