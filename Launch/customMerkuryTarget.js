@@ -1,11 +1,7 @@
 _satellite.logger.debug("Running custom Merkury Target call");
 
-var hmid = _svDataLayer.trackIdentityDataLayer.data.hmid;
+var hmid = _svDataLayer.hmid;
 
-if (!hmid) {
-    _satellite.logger.debug("Merkury Target call skipped, no hmid found in data layer.");
-    return false;
-}
 _satellite.logger.debug("Web SDK call with hmid: " + hmid);
 
 alloy("sendEvent", {
@@ -31,21 +27,6 @@ alloy("sendEvent", {
             document.getElementById('targetContent').innerText = JSON.stringify(tContent, null, 2);
         }
     }
-
-    /*
-    //https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content
-        alloy("applyPropositions", {
-            "propositions": merkuryIdentityResult.propositions,
-            "metadata": {
-                "merkuryIdentity": {
-                    "selector": "#targetContent",
-                    "actionType": "appendHtml"
-                }
-            }
-        }).then(function (applyPropositionsResult) {
-            var renderedPropositions = applyPropositionsResult.propositions;
-        });
-    */
 }).catch(function (err) {
     _satellite.logger.debug("merkuryIdentity ERROR", err);
     window.merkuryIdentityError = err;

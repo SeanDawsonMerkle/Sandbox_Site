@@ -5,7 +5,7 @@
     <script>
         performance.mark("head:start");
     </script>
-    <title>SeanD Sandbox Site</title>
+    <title>SeanD Sandbox Site Edge POC</title>
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
     <!--/CSS-->
@@ -17,26 +17,6 @@
             page_name: "homepage",
             page_description: "main page of sandbox site"
         });
-    </script>
-    <!--prehiding snippet for Adobe Target with asynchronous tags deployment-->
-    <script>
-        (function (g, b, d, f) {
-            (function (a, c, d) {
-                if (a) {
-                    var e = b.createElement("style");
-                    e.id = c;
-                    e.innerHTML = d;
-                    a.appendChild(e)
-                }
-            })(b.getElementsByTagName("head")[0], "at-body-style", d);
-            setTimeout(function () {
-                var a = b.getElementsByTagName("head")[0];
-                if (a) {
-                    var c = b.getElementById("at-body-style");
-                    c && a.removeChild(c)
-                }
-            }, f)
-        })(window, document, "body {opacity: 0.5 !important}", 500);
     </script>
     <!--/prehiding snippet for Adobe Target with asynchronous tags deployment-->
     <!--Adobe Launch dev environment-->

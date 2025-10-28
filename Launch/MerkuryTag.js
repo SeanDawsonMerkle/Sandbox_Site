@@ -11,7 +11,7 @@ window._svq.push(['_trackIdentity', (result) => {
     var identity = result?.d?.trackIdentity?.data;
     // DO STUFF WITH 'identity' data
     window._svDataLayer = identity;
-    document.getElementById('merkury_svDataLayer').innerText = JSON.stringify(tContent, null, 2);
+    document.getElementById('merkury_svDataLayer').innerText = JSON.stringify(window._svDataLayer, null, 2);
     //NOTE: tag fires '_svtrackidentity_response' after this callback
 }]);
 
