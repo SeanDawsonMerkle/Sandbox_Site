@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <script>
         performance.mark("head:start");
     </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>SeanD Sandbox Site</title>
+    
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--/CSS-->
-    <script src="sandbox.js"></script>
     <script>
         window.adobeDataLayer = window.adobeDataLayer || [];
         window.adobeDataLayer.push({
@@ -18,6 +21,7 @@
             page_description: "main page of sandbox site"
         });
     </script>
+    <script src="sandbox.js"></script>
     <!--prehiding snippet for Adobe Target with asynchronous tags deployment-->
     <script>
         (function (g, b, d, f) {
@@ -44,19 +48,60 @@
         async></script>
     <!--/Adobe Launch-->
 </head>
-
 <body>
-    <h1>Sean Dawson Merkle Sandbox</h1>
-    <p>Load Merkury Tag and call _trackIdentity</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <button id="StartMerkuryLoad">Start Merkury Process</button>
+    <!-- Hero Section -->
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Welcome to Our Website</h1>
+        <p class="lead">This is a hero section with a full-width background</p>
+        <button class="btn btn-light">Learn More</button>
+    </div>
 
-    <h2>Merkury returned _svDataLayer</h2>
-    <p id="merkury_svDataLayer">no initial content</p>
+    <!-- Content Sections -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Section One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Section Two</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
 
-    <h2>Target returned content</h2>
-    <p id="targetContent">no initial content</p>
-    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         window.adobeDataLayer.push({
             event: "body_end"
@@ -64,5 +109,4 @@
         performance.mark("body:end");
     </script>
 </body>
-
 </html>
