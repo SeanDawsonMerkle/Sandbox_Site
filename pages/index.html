@@ -4110,8 +4110,19 @@ oneTrustScriptLoader.addScript(TrustPilotWidgetLoaderCarousel);
                     // Hide form and show thank-you message
                     form.classList.add('d-none');
                     thankYou.classList.remove('d-none');
-                });
-            })();
+                    adobeDataLayer.push({
+                        event: 'quoteFormSubmitted',
+                        quoteType: form.quoteType.value,
+                        firstName: form.firstName.value,
+                        lastName: form.lastName.value,
+                        email: form.email.value,
+                        phone: form.phone.value,
+                        street: form.street.value,
+                        city: form.city.value,
+                        state: form.state.value,
+                        zip: form.zip.value
+                    });
+                })();
     </script>
     <!-- JS code for modal END -->
 
