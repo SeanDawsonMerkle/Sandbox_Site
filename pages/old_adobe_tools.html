@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Old Adobe Tools</title>
+    <title>Old Adobe Tools Sandbox</title>
     <!--Data Layer-->
     <script>
         var digitalData = {
@@ -15,19 +15,24 @@
     </script>
     <!--/Data Layer-->
     <!--Adobe Launch -->
-    <!-- script src="https://assets.adobedtm.com/666644a00be2/89df2510bdf4/launch-9dfe494e4bba.min.js" async></script -->
-    <script src="https://assets.adobedtm.com/666644a00be2/89df2510bdf4/launch-d59a7acd48ce-development.min.js" async></script>
+    <script src="https://assets.adobedtm.com/666644a00be2/89df2510bdf4/launch-9dfe494e4bba.min.js" async></script>
+    <!-- script src="https://assets.adobedtm.com/666644a00be2/89df2510bdf4/launch-d59a7acd48ce-development.min.js" async></script-->
     <!--/Adobe Launch-->
 </head>
 
 <body>
     <h1>Old Adobe Tools</h1>
-    <p>The Launch library used for this page loads the standalone tools for:</p>
+    <p>The Launch library used for this page loads these standalone Adobe extensions:</p>
     <ul>
         <li>Experience Cloud ID Service (Visitor)</li>
-        <li>Adobe Analytics (AppMeasurement)</li>
-        <li>Adobe Target v2 (adobe.target)</li>
+        <li>Adobe Analytics (AppMeasurement - dgpsmerkleaadev) : Network event filter = b/ss </li>
+        <li>Adobe Target v2 (adobe.target) : Network event filter = tt.omt</li>
     </ul>
+    <p>The older, static W3C digital data layer (digitalData) is used for reference purposes.</p>
+    <p>NOTE: enter <strong>_satellite.setDebug(true)</strong> in the browser console to display Launch debug information.</p>
+    <p>- Also check <strong>'Verbose'</strong> to set All levels in the Log Levels droplist</p>
+    <img src="images/LaunchLogging.png" alt="Launch Logging" style="width: 400px; margin-left: 50px;">
+
 </body>
 
 </html>

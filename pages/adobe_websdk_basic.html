@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Adobe Web SDK Sandbox</title>
+    <!--Data Layer-->
+    <script>
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        adobeDataLayer.push({
+            "event": "page_load",
+            "pageName": "Basic Adobe Web SDK"
+        });
+    </script>
+    <!--/Data Layer-->
+    <!--Adobe Launch -->
+    <!-- script src="https://assets.adobedtm.com/666644a00be2/9c0c83cb26d2/launch-17e4f6ed54af.min.js" async></script-->
+    <script src="https://assets.adobedtm.com/666644a00be2/9c0c83cb26d2/launch-de582b4e1f55-development.min.js" async></script>
+    <!--/Adobe Launch-->
+</head>
+
+<body>
+    <h1>Basic Adobe Web SDK</h1>
+    <p>The Launch library used for this page loads the Adobe Web SDK with the basic, default settings.</p>
+    <p>NOTE: enter <strong>_satellite.setDebug(true)</strong> in the browser console to display Launch debug information.</p>
+    <p>- Also check <strong>'Verbose'</strong> to set All levels in the Log Levels droplist</p>
+    <img src="images/LaunchLogging.png" alt="Launch Logging" style="width: 400px; margin-left: 50px;">
+</body>
+
+</html>
